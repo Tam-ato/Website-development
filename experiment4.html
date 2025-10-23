@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Room Booking Form</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        form {
+        
+            width: 500px; 
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        /* Style for the labels and inputs to align them well */
+        label {
+            display: inline-block;
+            width: 150px; /* Adjust this width to align the inputs */
+            text-align: right;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="text"], 
+        input[type="email"], 
+        input[type="tel"], 
+        input[type="number"], 
+        input[type="date"],
+        select {
+            width: 250px;
+            padding: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        textarea {
+            width: 420px;
+            height: 100px;
+            padding: 5px;
+            box-sizing: border-box;
+            resize: vertical;
+            display: block;
+            margin-left: 170px; /* Align textarea under the inputs */
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hotel Room Booking Form</h1>
+    
+    <form action="/submit-booking" method="post"> 
+        
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Format: 123-456-7890"><br>
+
+        <label for="check_in">Check-in Date: dd-mm-yyyy</label>
+        <input type="date" id="check_in" name="check_in" required><br>
+        
+        <label for="check_out">Check-out Date: dd-mm-yyyy</label>
+        <input type="date" id="check_out" name="check_out" required><br>
+        
+        <label for="room_type">Room Type:</label>
+        <select id="room_type" name="room_type">
+            <option value="single" selected>Single Room</option>
+            <option value="double">Double Room</option>
+            <option value="suite">Suite</option>
+        </select><br>
+
+        <label for="guests">Number of Guests:</label>
+        <input type="number" id="guests" name="guests" min="1" max="10" required><br>
+
+        <label for="requests" style="display: block; text-align: left; width: auto; margin-left: 170px;">Special Requests:</label>
+        <textarea id="requests" name="special_requests" rows="5"></textarea>
+        
+        <div class="buttons">
+            <input type="submit" value="Book Now">
+            
+            <input type="reset" value="Reset Form">
+        </div>
+
+    </form>
+    
+</body>
+</html>
