@@ -28,8 +28,8 @@
         <input type="date" id="check_out" name="check_out" required></p>
         
       <p>  <label style="text-align: right;"for="room_type">Room Type:</label>
-        <select id="room_type" name="room_type">
-            <option value="single" selected>Single Room</option>
+        <select id="room_type" name="room_type" required>   
+             <option value="single" selected>Single Room</option>
             <option value="double">Double Room</option>
             <option value="suite">Suite</option>
         </select></p>
@@ -39,7 +39,7 @@
 
        <p> <label style="text-align: right;"for="requests" style="display: block; text-align: left; width: auto; margin-left: 170px;">Special Requests:</label></p>
         <textarea id="requests" name="special_requests" rows="5" cols="50"></textarea>
-        
+        </select><br>      
         <div class="buttons">
             <input type="submit" value="Book Now">
             
