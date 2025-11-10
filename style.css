@@ -1,0 +1,102 @@
+
+body {
+    background-color: #f0f0f0; 
+    padding-top: 20px;
+}
+.page-container {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.header {
+    background-color: #333; 
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+.shop-name {
+    font-size: 24px;
+    margin: 0;
+}
+.product-card-container {
+    padding: 30px;
+   }
+
+.product-card {
+    width: 800px; 
+    text-align: center; 
+    margin: 10 auto;
+    max-width: 100%;
+    align-self: center;
+    background-color:  white;
+    border: 1px solid #ccc; 
+    padding: 15px;
+}
+
+/* Image Styling */
+.product-image  {
+    width: 200%;
+    max-width: 200px; 
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: gray;
+    box-shadow: #999 2px 2px 5px; 
+}
+
+/* Text Details */
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+     text-align: left;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 10px 0;
+    text-align: left;
+}
+
+/* Price Styling */
+.product-price {
+    margin: 10px 0 15px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.current-price {
+    color: #008000; /* Green color for the current price */
+    margin-right: 10px;
+    text-align: left;
+}
+
+.original-price {
+    color: #999; /* Light gray color for the original price */
+    text-decoration: line-through; /* Strikethrough effect */
+    font-weight: normal;
+    font-size: 14px;
+}
+
+/* Button Styling */
+.add-to-cart-btn {
+    background-color: #007bff; /* Blue button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3;
+}
