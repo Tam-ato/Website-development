@@ -3,6 +3,7 @@ body {
     background-color: #f0f0f0; 
     padding-top: 20px;
 }
+
 .page-container {
     width: 100%;
     max-width: 750px;
@@ -22,6 +23,7 @@ body {
 }
 .product-card-container {
     padding: 30px;
+    margin : 10;
    }
 
 .product-card {
@@ -33,6 +35,10 @@ body {
     background-color:  white;
     border: 1px solid #ccc; 
     padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+    
 }
 
 /* Image Styling */

@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0; 
+}
+
+.navigation-container {
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.nav-header {
+    background-color: #d3d3d3; /* Light gray background */
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.1em;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+}
+
+.website-text {
+    font-weight: bold;
+    font-style: italic;
+    color: red; 
+}
+.navigation-menu {
+    padding: 10px;
+}
+
+.nav-row {
+    list-style: none;/* Remove default bullets */
+    padding: 0;/* Remove default padding */
+    margin: 5px 0;
+    display: flex; /* Arrange items in a row */
+}
+
+.nav-row li {
+    margin-right: 5px; /* Space between buttons */
+}
+.nav-button {
+    display: block; /* Make the whole area clickable */
+    padding: 8px 15px;
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Dark text color */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 0.95em;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.blue-btn {
+    background-color: #b0e0e6; 
+}
+
+.blue-btn:hover {
+    background-color: #87cefa;
+}
+
+
+.green-btn {
+    background-color: #90ee90;
+}
+
+.green-btn:hover {
+    background-color: #3cb371; 
+}
