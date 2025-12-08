@@ -6,20 +6,22 @@ body {
 }
 
 .navigation-container {
-    border: 1px solid #ccc;
+    border: 1px solid black;
     width: 80%;
     max-width: 800px;
     margin: 0 auto;
     background-color: white;
+
 }
 
 .nav-header {
-    background-color: #d3d3d3; /* Light gray background */
-    padding: 10px 0;
+    background-color: #d3d3d3; 
+    padding: 10px 10px 10px 10px;
     text-align: center;
     font-size: 1.1em;
     color: #333;
     border-bottom: 1px solid #ccc;
+    margin: 0px 10px 0px 10px;
 }
 
 .website-text {
@@ -32,21 +34,20 @@ body {
 }
 
 .nav-row {
-    list-style: none;/* Remove default bullets */
-    padding: 0;/* Remove default padding */
+    list-style: none;
+    padding: 0;
     margin: 5px 0;
-    display: flex; /* Arrange items in a row */
+   display: flex;
 }
 
 .nav-row li {
-    margin-right: 5px; /* Space between buttons */
+    margin-right: 5px; 
 }
 .nav-button {
-    display: block; /* Make the whole area clickable */
+    display: block; 
     padding: 8px 15px;
-    text-decoration: none; /* Remove underline */
-    color: #333; /* Dark text color */
-    border-radius: 4px; /* Slightly rounded corners */
+    text-decoration: none;  
+    color: purple; 
     font-size: 0.95em;
     border: 1px solid rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;

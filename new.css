@@ -1,0 +1,24 @@
+.block-container {
+  border: 1px solid blue;
+  padding: 10px;
+  width: 200px; 
+}
+
+.box {
+  border: 1px solid blue;
+  margin: 5px; /* Adds space between boxes */
+  padding: 10px;
+  text-align: center;
+  /* By default, div is block-level and takes full width */
+}
+.inline-container {
+  border: 1px solid green;
+  padding: 10px;
+}
+.inline-box {
+  border: 1px solid green;
+  margin: 5px; /* Adds space between inline boxes */
+  padding: 10px;
+  text-align: center;
+  display: inline-block; /* Makes the div behave like an inline element */
+}

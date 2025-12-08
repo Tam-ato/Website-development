@@ -1,0 +1,52 @@
+
+.container {
+    border: 3px solid #0056b3; 
+    max-width: 900px; 
+    margin: 20px auto; 
+}
+
+
+.header, .footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f8f8f8; 
+}
+
+
+.main-content {
+    display: flex;
+    min-height: 250px; 
+}
+
+.sidebar {
+    width: 25%; 
+    padding: 20px 10px;
+    background-color: #f1f1f1;
+    display: flex; 
+    flex-direction: column;
+}
+
+.sidebar a {
+    text-decoration: none;
+    margin-bottom: 5px; 
+}
+
+.sidebar .link-1 {
+    color: black;
+}
+.sidebar .link-2 {
+    color: black;
+}
+.sidebar .link-3 {
+    color: green; 
+}
+
+.content {
+    width: 75%; 
+    padding: 20px;
+    border-left: 1px solid #ccc; 
+}
+
+.content h2 {
+    margin-top: 0;
+}

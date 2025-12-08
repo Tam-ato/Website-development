@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+    display: block;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icons span, .login-btn {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.hamburger {
+    display: none; /* Hide hamburger on desktop */
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 1.5rem;
+}
+
+/* Styles for the vertical menu appearance (mobile view) */
+@media (max-width: 768px) {
+    .nav-links ul {
+        display: none; /* Hide horizontal menu */
+        position: absolute;
+        right: 0;
+        top: 50px; /* Adjust based on navbar height */
+        background-color: #444;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links ul li a {
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    /* A class that would be added by JavaScript to show the menu */
+    .nav-links.active ul {
+        display: flex;
+    }
+}
