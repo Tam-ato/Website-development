@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lumina | Choose Your Stay</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background: #ffffff; 
+            color: #2d3436; 
+            font-family: 'Outfit', sans-serif;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        header {
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .logo-wrap { display: flex; align-items: center; gap: 10px; }
+        .logo-text { font-weight: 800; font-size: 1.5rem; color: #ee2a24; }
+        .plane { font-size: 1.4rem; display: inline-block; }
+
+        .search-summary {
+            background: #ee2a24;
+            color: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .booking-container {
+            display: grid;
+            grid-template-columns: 280px 1fr; 
+            gap: 30px;
+            max-width: 1300px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+    
+        .sidebar {
+            background: white;
+            padding: 25px;
+            border-radius: 25px;
+            height: fit-content;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid #f1e6d8;
+        }
+
+        .filter-group { margin-bottom: 25px; }
+        .filter-group h4 { font-size: 0.8rem; color: #a4b0be; text-transform: uppercase; margin-bottom: 15px; }
+        .filter-item { display: block; margin-bottom: 10px; font-size: 0.9rem; color: #2f3542; cursor: pointer; }
+
+        .hotel-card {
+            background: white;
+            border-radius: 30px;
+            display: flex;
+            margin-bottom: 25px;
+            overflow: hidden;
+            transition: 0.3s;
+            border: 5px solid rgb(76, 16, 16);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+        }
+
+        .hotel-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(238, 42, 36, 0.1); }
+
+        .hotel-img {
+            width: 350px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .hotel-info {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hotel-header { display: flex; justify-content: space-between; align-items: flex-start; }
+        .hotel-name { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #1e272e; }
+        .rating { color: #ffa502; font-weight: bold; }
+
+        .amenities { display: flex; gap: 15px; margin: 15px 0; font-size: 0.8rem; color: #747d8c; }
+
+        .hotel-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-top: 20px;
+            border-top: 1px solid #f1e6d8;
+        }
+
+        .price-section .price { font-size: 1.8rem; font-weight: 800; color: #ee2a24; }
+        .price-section .per-night { font-size: 0.8rem; color: #a4b0be; }
+
+        .book-btn {
+            background: #ee2a24;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .book-btn:hover { background: #c0221d; }
+        nav a {
+            display: flex;
+            gap: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #e06662;
+        }
+        nav a:hover {
+            color: #440806;
+        }
+
+        .tag { background: #feeaea; color: #ee2a24; padding: 4px 10px; border-radius: 5px; font-size: 0.7rem; font-weight: bold; margin-bottom: 8px; display: inline-block; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-wrap">
+            <span class="plane">🍅</span>
+            <div class="logo-text">TAMATO</div>
+        </div>
+        <nav>
+            <span><a href="#">• HOME</a></span>
+            <span><a href="#">• OFFERS</a></span>
+            <span><a href="#">• SUPPORT</a></span>
+        </nav>
+    </header>
+
+    <div class="search-summary">
+        <div><strong>Location:</strong> Maldives </div>
+        <div><strong>Dates:</strong> 22 Dec - 28 Dec</div>
+        <div><strong>Guests:</strong> 2 Adults</div>
+        <div style="text-decoration: underline; cursor: pointer;">Edit Search</div>
+    </div>
+
+    <div class="booking-container">
+        <aside class="sidebar">
+            <div class="filter-group">
+                <h4>Filters</h4>
+                <label class="filter-item"><input type="checkbox"> 4 Stars & Above</label>
+                <label class="filter-item"><input type="checkbox"> Breakfast Included</label>
+                <label class="filter-item"><input type="checkbox"> Free Cancellation</label>
+            </div>
+            <div class="filter-group">
+                <h4>Vibe</h4>
+                <label class="filter-item"><input type="radio" name="vibe"> Homey & Comfy</label>
+                <label class="filter-item"><input type="radio" name="vibe"> Modern Luxury</label>
+                <label class="filter-item"><input type="radio" name="vibe"> Adventure Hub</label>
+            </div>
+        </aside>
+
+        <main class="hotel-list">
+            
+            <div class="hotel-card">
+                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600" class="hotel-img" alt="Hotel">
+                <div class="hotel-info">
+                    <div>
+                        <span class="tag">SUPER CHOICE</span>
+                        <div class="hotel-header">
+                            <h2 class="hotel-name">The Rose Villa</h2>
+                            <span class="rating">⭐ 4.9</span>
+                        </div>
+                        <div class="amenities">
+                            <span>☕ Free Breakfast</span>
+                            <span>📶 5G WiFi</span>
+                            <span>🍿 Movie Projector</span>
+                        </div>
+                    </div>
+                    <div class="hotel-footer">
+                        <div class="price-section">
+                            <p class="per-night">per night</p>
+                            <span class="price">₹4,499</span>
+                        </div>
+                        <button class="book-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=600" class="hotel-img" alt="Hotel">
+                <div class="hotel-info">
+                    <div>
+                        <span class="tag">TOP RATED</span>
+                        <div class="hotel-header">
+                            <h2 class="hotel-name">Coral Boutique</h2>
+                            <span class="rating">⭐ 4.8</span>
+                        </div>
+                        <div class="amenities">
+                            <span>🏊 Pool Access</span>
+                            <span>🧘 Zen Garden</span>
+                            <span>🍹 Welcome Drink</span>
+                        </div>
+                    </div>
+                    <div class="hotel-footer">
+                        <div class="price-section">
+                            <p class="per-night">per night</p>
+                            <span class="price">₹3,850</span>
+                        </div>
+                        <button class="book-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600" class="hotel-img" alt="Hotel">
+                <div class="hotel-info">
+                    <div>
+                        <span class="tag">LUXURY COLLECTION</span>
+                        <div class="hotel-header">
+                            <h2 class="hotel-name">Lavander Resort</h2>
+                            <span class="rating">⭐ 5.0</span>
+                        </div>
+                        <div class="amenities">
+                            <span>🌊 Ocean View</span>
+                            <span>🍽️ Private Chef</span>
+                            <span>🛸 Airport Transfer</span>
+                        </div>
+                    </div>
+                    <div class="hotel-footer">
+                        <div class="price-section">
+                            <p class="per-night">per night</p>
+                            <span class="price">₹8,999</span>
+                        </div>
+                        <button class="book-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
+
